@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <div class="jumbotron">
+
+    <h1 class="display-4 text-center"> A Secret <i class="fas fa-key fa-1x"></i></h1>
+
+    <p class="secret-text"> "<%- secret.content %>" </p>
+
+    <form action="/comment" method="POST">
+      <div class="row">
+        <div class="form-group col-10">
+          <input type="hidden" name="id" value="<%- secret._id %>">
+          <input type="hidden" name="page" value="<%=page%>">
+          <input type="text" class="form-control text-center" name="comment" placeholder="Comment...  ">
+        </div>
+        <div class="col-2">
+          <button type="submit" class="btn btn-dark">Submit</button>
+        </div>
+      </div>
+
+    </form>
+    <hr>
+    <%if(secret.comment.length==0){%><p>No comments yet, maybe you want to say somthing...</p><%}%>
+    <% for(var index=0;index<secret.comment.length;index++){ %>
+      <p class=" <%if(index%2==0){%>comment-text1<%}%> <%if(index%2==1){%>comment-text2<%}%> shadow-sm"><%=secret.comment[index]%></p>
+
+    <% } %>
+    <form class="text-center" action="/return" method="post">
+      <input type="hidden" name="page" value="<%=page%>">
+      <button type="submit" class="btn btn-dark">Return</button>
+    </form>
+  </div>
+</div>
+<%- include('partials/footer') %>

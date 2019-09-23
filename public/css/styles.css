@@ -1,0 +1,54 @@
+
+body {
+  background-color: #E8ECEF;
+}
+
+.centered {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.secret-text {
+  margin: 40px 0 25px;
+  padding: 6px;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000;
+}
+
+.comment-text1{
+  display: inline;
+  font-size: 1.5rem;
+  background-color: #B0B0B0;
+  padding: 5px;
+  margin-right: 10px;
+  line-height:3rem;
+}
+
+.comment-text2{
+  display: inline;
+  font-size: 1.5rem;
+  background-color: #D5D5D5;
+  padding: 5px;
+  margin-right: 10px;
+  line-height:3rem;
+}
+
+.carousel-control-next,
+.carousel-control-prev,
+.carousel-indicators {
+    filter: invert(100%);
+}
+
+
+.deck{
+  padding: 0 15%;
+}
+.card-body{
+  height: 270px;
+}
+.down-align{
+  width:195px;
+  position: absolute;
+  bottom: 20px;
+}
