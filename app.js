@@ -21,7 +21,7 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
-mongoose.connect('mongodb+srv://username:password@cluster0-wruag.mongodb.net/userDB',{useNewUrlParser:true});
+mongoose.connect('mongodb+srv://admin:jang050517@cluster0.wh0g8.mongodb.net/userDB',{useNewUrlParser:true});
 mongoose.set("useCreateIndex",true);
 const userSchema = new mongoose.Schema({
   username:String,
