@@ -21,14 +21,14 @@
 
     </form>
     <hr>
-    <%if(secret.comment.length==0){%><p>No comments yet, maybe you want to say somthing...</p><%}%>
+    <%if(secret.comment.length==0){%><p>아직 의견이 없습니다!</p><%}%>
     <% for(var index=0;index<secret.comment.length;index++){ %>
       <p class=" <%if(index%2==0){%>comment-text1<%}%> <%if(index%2==1){%>comment-text2<%}%> shadow-sm"><%=secret.comment[index]%></p>
 
     <% } %>
     <form class="text-center" action="/return" method="post">
       <input type="hidden" name="page" value="<%=page%>">
-      <button type="submit" class="btn btn-dark">Return</button>
+      <button type="submit" class="btn btn-dark">뒤로</button>
     </form>
   </div>
 </div>
